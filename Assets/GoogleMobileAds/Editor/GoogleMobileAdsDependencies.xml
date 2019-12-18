@@ -1,6 +1,6 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.android.gms:play-services-ads:16.0.0">
+    <androidPackage spec="com.google.android.gms:play-services-ads:18.2.0">
       <repositories>
         <repository>https://maven.google.com/</repository>
       </repositories>
@@ -14,6 +14,14 @@
         </repositories>
     </androidPackage>
     <androidPackage spec="jp.fluct.mediation.gma:gma-mediation:6.1.0">
+        <repositories>
+            <repository>https://voyagegroup.github.io/FluctSDK-Android/m2/repository</repository>
+            <repository>https://maven.google.com</repository>
+            <repository>https://jcenter.bintray.com</repository>
+            <repository>http://central.maven.org/maven2</repository>
+        </repositories>
+    </androidPackage>
+    <androidPackage spec="jp.fluct.fluctsdk:banner:6.1.0">
         <repositories>
             <repository>https://voyagegroup.github.io/FluctSDK-Android/m2/repository</repository>
             <repository>https://maven.google.com</repository>
