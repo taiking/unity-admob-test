@@ -1,9 +1,23 @@
 <dependencies>
   <packages>
+    <package>com.adcolony:sdk:4.1.0</package>
+    <package>com.applovin:applovin-sdk:9.9.0</package>
+    <package>com.glossom:glossom-ads-android:2.0.0</package>
     <package>com.google.android.gms:play-services-ads:18.2.0</package>
+    <package>com.maio:android-sdk:1.1.10@aar</package>
+    <package>com.tapjoy:tapjoy-android-sdk:12.3.4@aar</package>
+    <package>com.unity3d.ads:unity-ads:3.3.0</package>
     <package>jp.fluct.fluctsdk:banner:6.1.0</package>
     <package>jp.fluct.mediation.gma:gma-mediation:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-adcolony:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-adcorsa:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-applovin:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-maio:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-nend:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-tapjoy:6.1.0</package>
+    <package>jp.fluct.mediation:rewardedvideo-mediation-unityads:6.1.0</package>
     <package>jp.fluct:FluctSDK:6.1.0</package>
+    <package>net.nend.android:nend-sdk:5.1.1</package>
   </packages>
   <files>
     <file>Assets/Plugins/Android/androidx.annotation.annotation-1.0.0.jar</file>
@@ -13,6 +27,8 @@
     <file>Assets/Plugins/Android/androidx.asynclayoutinflater.asynclayoutinflater-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.browser.browser-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.collection.collection-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/androidx.constraintlayout.constraintlayout-1.1.3.aar</file>
+    <file>Assets/Plugins/Android/androidx.constraintlayout.constraintlayout-solver-1.1.3.jar</file>
     <file>Assets/Plugins/Android/androidx.coordinatorlayout.coordinatorlayout-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.core.core-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.cursoradapter.cursoradapter-1.0.0.aar</file>
@@ -40,6 +56,9 @@
     <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.webkit.webkit-1.0.0.aar</file>
+    <file>Assets/Plugins/Android/com.adcolony.sdk-4.1.0.aar</file>
+    <file>Assets/Plugins/Android/com.applovin.applovin-sdk-9.9.0.aar</file>
+    <file>Assets/Plugins/Android/com.glossom.glossom-ads-android-2.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-18.2.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-base-18.2.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-ads-identifier-17.0.0.aar</file>
@@ -54,9 +73,20 @@
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-measurement-sdk-api-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-stats-17.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.gms.play-services-tasks-16.0.1.aar</file>
+    <file>Assets/Plugins/Android/com.maio.android-sdk-1.1.10.aar</file>
+    <file>Assets/Plugins/Android/com.tapjoy.tapjoy-android-sdk-12.3.4.aar</file>
+    <file>Assets/Plugins/Android/com.unity3d.ads.unity-ads-3.3.0.aar</file>
     <file>Assets/Plugins/Android/jp.fluct.fluctsdk.banner-6.1.0.aar</file>
     <file>Assets/Plugins/Android/jp.fluct.FluctSDK-6.1.0.aar</file>
     <file>Assets/Plugins/Android/jp.fluct.mediation.gma.gma-mediation-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-adcolony-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-adcorsa-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-applovin-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-maio-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-nend-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-tapjoy-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/jp.fluct.mediation.rewardedvideo-mediation-unityads-6.1.0.aar</file>
+    <file>Assets/Plugins/Android/net.nend.android.nend-sdk-5.1.1.aar</file>
   </files>
   <settings>
     <setting name="androidAbis" value="armeabi-v7a,x86" />
