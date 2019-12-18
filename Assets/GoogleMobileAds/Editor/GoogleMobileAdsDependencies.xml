@@ -5,6 +5,22 @@
         <repository>https://maven.google.com/</repository>
       </repositories>
     </androidPackage>
+    <androidPackage spec="jp.fluct:FluctSDK:6.1.0">
+        <repositories>
+            <repository>https://voyagegroup.github.io/FluctSDK-Android/m2/repository</repository>
+            <repository>https://maven.google.com</repository>
+            <repository>https://jcenter.bintray.com</repository>
+            <repository>http://central.maven.org/maven2</repository>
+        </repositories>
+    </androidPackage>
+    <androidPackage spec="jp.fluct.mediation.gma:gma-mediation:6.1.0">
+        <repositories>
+            <repository>https://voyagegroup.github.io/FluctSDK-Android/m2/repository</repository>
+            <repository>https://maven.google.com</repository>
+            <repository>https://jcenter.bintray.com</repository>
+            <repository>http://central.maven.org/maven2</repository>
+        </repositories>
+    </androidPackage>
   </androidPackages>
 
   <iosPods>
@@ -12,6 +28,22 @@
       <sources>
         <source>https://github.com/CocoaPods/Specs</source>
       </sources>
+    </iosPod>
+    <iosPod
+        name="GoogleMobileAdsMediationFluct"
+        version="5.16.4"
+        minTargetSdk="8.1">
+        <sources>
+            <source>https://github.com/CocoaPods/Specs</source>
+        </sources>
+    </iosPod>
+    <iosPod
+        name="FluctSDK"
+        version="5.16.4"
+        minTargetSdk="8.1">
+        <sources>
+            <source>https://github.com/CocoaPods/Specs</source>
+        </sources>
     </iosPod>
   </iosPods>
 </dependencies>
