@@ -22,9 +22,9 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
     private void RequestRewardedVideo()
     {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/5224354917";
+        string adUnitId = "ca-app-pub-3010029359415397/9326334640";
 #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-3940256099942544/1712485313";
+        string adUnitId = "ca-app-pub-3010029359415397/4697035240";
 #else
             string adUnitId = "unexpected_platform";
 #endif
