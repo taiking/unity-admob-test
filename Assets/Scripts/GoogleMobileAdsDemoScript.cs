@@ -9,17 +9,6 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
     void Start () {
         MobileAds.Initialize(initStatus => { });
 
-#if UNITY_ANDROID
-            string appId = "ca-app-pub-3940256099942544~3347511713";
-#elif UNITY_IPHONE
-        string appId = "ca-app-pub-3940256099942544~1458002511";
-#else
-            string appId = "unexpected_platform";
-#endif
-
-        // Initialize the Google Mobile Ads SDK.
-        MobileAds.Initialize(appId);
-
         this.RequestBanner();
     }
 	
@@ -31,9 +20,9 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
     private void RequestBanner()
     {
 #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-3940256099942544/6300978111";
+            string adUnitId = "ca-app-pub-3010029359415397/7064785775";
 #elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+        string adUnitId = "ca-app-pub-3010029359415397/6373517647";
 #else
             string adUnitId = "unexpected_platform";
 #endif
