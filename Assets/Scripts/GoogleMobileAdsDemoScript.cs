@@ -6,18 +6,38 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
 
     private BannerView bannerView;
     private RewardedAd rewardedAd;
+    private InterstitialAd interstitial;
 
     void Start () {
         MobileAds.Initialize(initStatus => { });
 
         //this.RequestBanner();
-        this.RequestRewardedVideo();
+        //this.RequestRewardedVideo();
+        this.RequestInterstitial();
     }
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
+
+    private void RequestInterstitial()
+    {
+#if UNITY_ANDROID
+        string adUnitId = "ca-app-pub-3940256099942544/1033173712";
+#elif UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3010029359415397/5031866416";
+#else
+        string adUnitId = "unexpected_platform";
+#endif
+        this.interstitial = new InterstitialAd(adUnitId);
+        this.interstitial.OnAdLoaded += HandleOnAdLoadedInst;
+        this.interstitial.OnAdFailedToLoad += HandleOnAdFailedToLoadInst;
+        this.interstitial.OnAdOpening += HandleOnAdOpenedInst;
+        this.interstitial.OnAdClosed += HandleOnAdClosedInst;
+        this.interstitial.OnAdLeavingApplication += HandleOnAdLeavingApplicationInst;
+        AdRequest request = new AdRequest.Builder().Build();
+        this.interstitial.LoadAd(request);
+    }
 
     private void RequestRewardedVideo()
     {
@@ -29,23 +49,13 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
             string adUnitId = "unexpected_platform";
 #endif
         this.rewardedAd = new RewardedAd(adUnitId);
-
-        // Called when an ad request has successfully loaded.
         this.rewardedAd.OnAdLoaded += HandleRewardedAdLoaded;
-        // Called when an ad request failed to load.
         this.rewardedAd.OnAdFailedToLoad += HandleRewardedAdFailedToLoad;
-        // Called when an ad is shown.
         this.rewardedAd.OnAdOpening += HandleRewardedAdOpening;
-        // Called when an ad request failed to show.
         this.rewardedAd.OnAdFailedToShow += HandleRewardedAdFailedToShow;
-        // Called when the user should be rewarded for interacting with the ad.
         this.rewardedAd.OnUserEarnedReward += HandleUserEarnedReward;
-        // Called when the ad is closed.
         this.rewardedAd.OnAdClosed += HandleRewardedAdClosed;
-
-        // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
-        // Load the rewarded ad with the request.
         this.rewardedAd.LoadAd(request);
     }
 
@@ -58,25 +68,42 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour {
 #else
             string adUnitId = "unexpected_platform";
 #endif
-
-        // Create a 320x50 banner at the top of the screen.
         this.bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
-
-        // Called when an ad request has successfully loaded.
         this.bannerView.OnAdLoaded += this.HandleOnAdLoaded;
-        // Called when an ad request failed to load.
         this.bannerView.OnAdFailedToLoad += this.HandleOnAdFailedToLoad;
-        // Called when an ad is clicked.
         this.bannerView.OnAdOpening += this.HandleOnAdOpened;
-        // Called when the user returned from the app after an ad click.
         this.bannerView.OnAdClosed += this.HandleOnAdClosed;
-        // Called when the ad click caused the user to leave the application.
         this.bannerView.OnAdLeavingApplication += this.HandleOnAdLeavingApplication;
-
         AdRequest request = new AdRequest.Builder().Build();
-
-        // Load the banner with the request.
         this.bannerView.LoadAd(request);
+    }
+
+    // interstitial video
+    public void HandleOnAdLoadedInst(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdLoaded event received");
+        this.interstitial.Show();
+    }
+
+    public void HandleOnAdFailedToLoadInst(object sender, AdFailedToLoadEventArgs args)
+    {
+        MonoBehaviour.print("HandleFailedToReceiveAd event received with message: "
+                            + args.Message);
+    }
+
+    public void HandleOnAdOpenedInst(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdOpened event received");
+    }
+
+    public void HandleOnAdClosedInst(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdClosed event received");
+    }
+
+    public void HandleOnAdLeavingApplicationInst(object sender, EventArgs args)
+    {
+        MonoBehaviour.print("HandleAdLeavingApplication event received");
     }
 
     // rewarded video handler 
